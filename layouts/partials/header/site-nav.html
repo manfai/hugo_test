@@ -1,4 +1,4 @@
-<div class="fixed z-50 bg-white lg:bg-transparent shadow-xl lg:shadow-none w-full lg:relative px-4 py-4 left-0 lg:py-4 mx-auto lg:max-w-screen-xl md:px-24 lg:px-8">
+<div class="fixed z-50 bg-primary lg:bg-transparent shadow-xl lg:shadow-none w-full lg:relative px-4 py-4 left-0 lg:py-4 mx-auto lg:max-w-screen-xl md:px-24 lg:px-8">
     <div class="relative flex items-center justify-between">
       <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
           {{ partial "logo.html" . }}
@@ -91,15 +91,20 @@
             </div>
             <nav>
               <ul class="space-y-4">
-                  <li>
-                    <a href="" download  class="inline-flex items-center justify-center w-full h-12 px-6 font-medium text-netural-content transition duration-200 btn btn-netural" aria-label="" title="">
-                        Menu 1
-                    </a>
-                  </li>
-                  <li><a href="" aria-label="" title=""  class="font-medium tracking-wide text-base-content">
-                    Menu 2
-                  </a></li>
-               
+                  {{ $currentPage := . }}
+                  {{ range .Site.Menus.main }}
+                    {{if eq .Identifier "download"}}
+                    <li>
+                      <a href="{{ .URL | absLangURL }}" download  class="inline-flex items-center justify-center w-full h-12 px-6 font-medium text-netural-content transition duration-200 btn btn-netural" aria-label="" title="">
+                        {{ .Name }}
+                      </a>
+                    </li>
+                    {{ else }}
+                    <li>
+                      <a href="{{ .URL | absLangURL }}"  aria-label="" title="" class="font-medium tracking-wide">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                  {{ end }}
               </ul>
             </nav>
           </div>

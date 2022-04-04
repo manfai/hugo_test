@@ -19,9 +19,10 @@ defaultContentLang = 'en'
       url = '/portfolio'
       weight = -100
     [[languages.en.menu.main]]
+      identifier = 'download'
       name = 'Download'
       url = '/download'
-      weight = -100
+      weight = -90
 
   [languages.zh-hk]
     title = '文輝的網站'
@@ -44,6 +45,7 @@ defaultContentLang = 'en'
       url = '/portfolio'
       weight = -100
     [[languages.zh-hk.menu.main]]
+      identifier = 'download'
       name = '下載'
       url = '/download'
       weight = -100
@@ -69,9 +71,10 @@ defaultContentLang = 'en'
       url = '/portfolio'
       weight = -100
     [[languages.zh-cn.menu.main]]
+      identifier = 'download'
       name = '下载'
       url = '/download'
-      weight = -100
+      weight = -90
 
 [params]
   githubUsername = 'manfai'
