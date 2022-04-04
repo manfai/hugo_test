@@ -1,4 +1,4 @@
-baseURL = 'https://manfai.me/'
+baseURL = 'http://manfai.me/hugo_test/'
 defaultContentLang = 'en'
 [languages]
   [languages.en]
