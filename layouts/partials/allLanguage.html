@@ -1,0 +1,6 @@
+<a tabindex="0" aria-label="" title="" class="font-medium tracking-wide">{{ T "Language" }}</a>
+<ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
+    {{ range $.Site.Home.AllTranslations }}
+    <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+    {{ end }}
+</ul>

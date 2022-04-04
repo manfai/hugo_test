@@ -1,29 +1,93 @@
-baseURL = 'http://manfai.me/hugo_test/'
+baseURL = 'http://manfai.me/'
 defaultContentLang = 'en'
 [languages]
   [languages.en]
     title = 'manfai.me'
+    languageName = 'English'
     weight = 1
+    [languages.en.menu]
+    [[languages.en.menu.main]]
+      name = 'About'
+      url = '/'
+      weight = -110
+    [[languages.en.menu.main]]
+      name = 'Resume'
+      url = '/resume'
+      weight = -100
+    [[languages.en.menu.main]]
+      name = 'Portfolio'
+      url = '/portfolio'
+      weight = -100
+    [[languages.en.menu.main]]
+      name = 'Download'
+      url = '/download'
+      weight = -100
+
   [languages.zh-hk]
     title = '文輝的網站'
+    languageName = '繁體中文'
     author = '文永輝'
     weight = 2
+    address = '元朗'
+    residence = '香港'
+    [languages.zh-hk.menu]
+    [[languages.zh-hk.menu.main]]
+      name = '關於'
+      url = '/'
+      weight = -110
+    [[languages.zh-hk.menu.main]]
+      name = '履歷'
+      url = '/resume'
+      weight = -100
+    [[languages.zh-hk.menu.main]]
+      name = '作品'
+      url = '/portfolio'
+      weight = -100
+    [[languages.zh-hk.menu.main]]
+      name = '下載'
+      url = '/download'
+      weight = -100
+      
   [languages.zh-cn]
     title = '文辉的网站'
+    languageName = '簡體中文'
     author = '文永辉'
     weight = 3
+    address = '元朗'
+    residence = '香港'
+    [languages.zh-cn.menu]
+    [[languages.zh-cn.menu.main]]
+      name = '关于'
+      url = '/'
+      weight = -110
+    [[languages.zh-cn.menu.main]]
+      name = '履历'
+      url = '/resume'
+      weight = -100
+    [[languages.zh-cn.menu.main]]
+      name = '作品'
+      url = '/portfolio'
+      weight = -100
+    [[languages.zh-cn.menu.main]]
+      name = '下载'
+      url = '/download'
+      weight = -100
+
 [params]
-  githubUsername = 'manfai106'
+  githubUsername = 'manfai'
   author = 'Man Wing Fai'
-  linkedinUsername = 'manfai106' 
-  twitterUsername = 'manfai106'
-  introduction  = ''
-  phone = ''
-  email = ''
-  address = ''
-  residence = ''
+  linkedinUsername = 'mannfai' 
+  twitterUsername = 'mannfai'
+  introduction  = 'Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again. '
+  phone = '+852 93517034'
+  email = 'iam@manfai.me'
+  address = 'Yuen Long'
+  residence = 'Hong Kong'
   [params.navigation]
     help = 'Help'
+
+
+
 [[module.mounts]]
   source = 'assets'
   target = 'assets'
